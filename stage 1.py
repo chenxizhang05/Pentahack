@@ -1,4 +1,4 @@
-visual = ['rereading', 'colour-coding', 'watching videos', 'mindmaps', 'flashcards']
+visual = ['rereading', 'colour-coding', 'videos', 'mindmaps', 'flashcards']
 auditory = ['mneunomics', 'memorising using songs', 'videos', 'listening to podcasts']
 readingwriting = ['rewriting notes', 'practising answering techniques']
 kinesthetic = ['highlighting', 'underlining', 'watching visual simulations', 'hands-on experiments']
