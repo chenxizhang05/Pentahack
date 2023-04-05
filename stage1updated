@@ -4,7 +4,10 @@ visual = ['rereading', 'colour-coding', 'videos', 'mindmaps', 'flashcards']
 auditory = ['mneunomics', 'memorising using songs', 'videos', 'listening to podcasts']
 readingwriting = ['rewriting notes', 'practising answering techniques']
 kinesthetic = ['highlighting', 'underlining', 'watching visual simulations', 'hands-on experiments']
-listfinal = []
+recommended_visual = ['videos', 'mindmaps', 'flashcards']
+recommended_auditory = ['videos', 'listening to podcasts']
+recommended_readingwriting = ['practising answering techniques']
+recommended_kinesthetic = ['watching visual simulations', 'hands-on experiments']
 
 input_string = input('Enter the list of your current learning styles: ')
 current_learning_style = input_string.split()
@@ -36,13 +39,13 @@ array_of_scores.sort(reverse = True)
 final = [array_of_scores[0][1], array_of_scores[1][1]]
 for i in range(2): 
     if final[i] == 'visual': 
-        listfinal.extend(visual)
+        listfinal.extend(recommended_visual)
     if final[i] == 'auditory': 
-        listfinal.extend(auditory)
+        listfinal.extend(recommended_auditory)
     if final[i] == 'reading/writing': 
-        listfinal.extend(reading/writing)
+        listfinal.extend(recommended_readingwriting)
     if final[i] == 'kinesthetic': 
-        listfinal.extend(kinesthetic)
+        listfinal.extend(recommended_kinesthetic)
         
 listfinal = list(dict.fromkeys(listfinal))
 
