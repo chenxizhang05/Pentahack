@@ -1,0 +1,49 @@
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+visual = ['rereading', 'colour-coding', 'videos', 'mindmaps', 'flashcards']
+auditory = ['mneunomics', 'memorising using songs', 'videos', 'listening to podcasts']
+readingwriting = ['rewriting notes', 'practising answering techniques']
+kinesthetic = ['highlighting', 'underlining', 'watching visual simulations', 'hands-on experiments']
+listfinal = []
+
+input_string = input('Enter the list of your current learning styles: ')
+current_learning_style = input_string.split()
+visual_score_1 = 0
+auditory_score_1 = 0
+readingwriting_score_1 = 0
+kinesthetic_score_1 = 0
+for i in range(len(current_learning_style)): 
+  if current_learning_style[i] in visual: 
+    visual_score_1 += 1
+  if current_learning_style[i] in auditory: 
+    auditory_score_1 += 1
+  if current_learning_style[i] in readingwriting: 
+    readingwriting_score_1 += 1
+  if current_learning_style[i] in kinesthetic: 
+    kinesthetic_score_1 += 1
+total_score = visual_score_1 + auditory_score_1 + readingwriting_score_1 + kinesthetic_score_1
+visual_score = visual_score_1/total_score * 100
+auditory_score = auditory_score_1/total_score * 100
+readingwriting_score = readingwriting_score_1/total_score * 100
+kinesthetic_score = kinesthetic_score_1/total_score * 100
+print("Your visual_score is: ", visual_score, "%")
+print("Your auditory_score is: ", auditory_score, "%")
+print("Your reading/writing_score is: ", readingwriting_score, "%")
+print("Your kinesthetic_score is: ", kinesthetic_score, "%")
+array_of_scores = [(visual_score, "visual"), (auditory_score, "auditory"), (readingwriting_score, "reading/writing"), (kinesthetic_score, "kinesthetic")]
+array_of_scores.sort(reverse = True)
+
+final = [array_of_scores[0][1], array_of_scores[1][1]]
+for i in range(2): 
+    if final[i] == 'visual': 
+        listfinal.extend(visual)
+    if final[i] == 'auditory': 
+        listfinal.extend(auditory)
+    if final[i] == 'reading/writing': 
+        listfinal.extend(reading/writing)
+    if final[i] == 'kinesthetic': 
+        listfinal.extend(kinesthetic)
+        
+listfinal = list(dict.fromkeys(listfinal))
+
+print("You are a", array_of_scores[0][1], "and", array_of_scores[1][1], "learner. Your recommended study methods are: " + ", ".join(listfinal) + ".")
