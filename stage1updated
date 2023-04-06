@@ -1,11 +1,12 @@
 visual = ['rereading', 'colour-coding', 'videos', 'mindmaps', 'flashcards']
 auditory = ['mneunomics', 'memorising using songs', 'videos', 'listening to podcasts']
 readingwriting = ['rewriting notes', 'practising answering techniques']
-kinesthetic = ['highlighting', 'underlining', 'watching visual simulations', 'hands-on experiments']
+kinesthetic = ['highlighting', 'underlining', 'interactive simulations', 'hands-on experiments']
 recommended_visual = ['videos', 'mindmaps', 'flashcards']
 recommended_auditory = ['videos', 'listening to podcasts']
 recommended_readingwriting = ['practising answering techniques']
-recommended_kinesthetic = ['watching visual simulations', 'hands-on experiments']
+recommended_kinesthetic = ['interactive simulations', 'hands-on experiments']
+listfinal = []
 
 input_string = input('Enter the list of your current learning styles: ')
 current_learning_style = input_string.split()
@@ -27,10 +28,10 @@ visual_score = visual_score_1/total_score * 100
 auditory_score = auditory_score_1/total_score * 100
 readingwriting_score = readingwriting_score_1/total_score * 100
 kinesthetic_score = kinesthetic_score_1/total_score * 100
-print("Your visual_score is: ", visual_score, "%")
-print("Your auditory_score is: ", auditory_score, "%")
-print("Your reading/writing_score is: ", readingwriting_score, "%")
-print("Your kinesthetic_score is: ", kinesthetic_score, "%")
+print("Your visual score is: ", visual_score, "%")
+print("Your auditory score is: ", auditory_score, "%")
+print("Your reading/writing score is: ", readingwriting_score, "%")
+print("Your kinesthetic score is: ", kinesthetic_score, "%")
 array_of_scores = [(visual_score, "visual"), (auditory_score, "auditory"), (readingwriting_score, "reading/writing"), (kinesthetic_score, "kinesthetic")]
 array_of_scores.sort(reverse = True)
 
